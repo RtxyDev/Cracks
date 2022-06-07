@@ -5,7 +5,7 @@ local plr = plrs.LocalPlayer
 
 --script here
 
-local Library = loadstring(game:HttpGet("https://gist.githubusercontent.com/SHEESHAhmet/3f84a5cb6183a2d7bcbcfb6ce588caff/raw/477ceec7c213342659f335c43f410fffad9fa766/uilib", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RtxyDev/Cracks/main/SS/VesoLux/Assets/UILIB.lua", true))()
 local main = Library:Window("Veso Lux", "Skywars")
 local HomeTab = main:Tab("Home")
 Library:Notify("Veso Lux Loaded!", "Welcome To Veso Lux", "Continueee!")
