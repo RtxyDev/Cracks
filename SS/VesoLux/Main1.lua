@@ -2,39 +2,7 @@ local plrs = game:GetService("Players")
 local https = game:GetService("HttpService")
 local plr = plrs.LocalPlayer
 
-local ids = {
-	1535827133, -- Hanki
-	1598687225, -- Batumation
-	1547918564, -- xQuest
-	2482958202, -- Tameria
-	2310420760, -- Egw
-	2652287078, -- Batumation
-	1848185287, -- Pog Cat
-	858971554, -- Ağmirhan
-	3141486409, -- benbatucukxd
-	2479887915, -- Ağmirhan2
-	2573191265, -- Alex's
-	3311377302, -- naneyiyiyemedinmi31
-	338135727, -- Babaci Pablo
-	3574687831 -- Jadeev
-}
 
-if not plr.Character then plr.CharacterAdded:Wait() end
-if plr.Name ~= plr.Character.Name then
-	return --exit immediately because they're trying to spoof
-end
-
-local data = game:HttpGet('https://api.roblox.com/users/get-by-username?username='..plr.Character.Name)
-local id = https:JSONDecode(data)["Id"]
-local yes = false
-
-for i,v in pairs(ids) do
-	if id == v then
-		yes = true
-	end
-end
-
-if not yes then return end
 --script here
 
 local Library = loadstring(game:HttpGet("https://gist.githubusercontent.com/SHEESHAhmet/3f84a5cb6183a2d7bcbcfb6ce588caff/raw/477ceec7c213342659f335c43f410fffad9fa766/uilib", true))()
@@ -3650,12 +3618,10 @@ local ismet =  game.Players:FindFirstChild("xAnrimis")
 local egexlia =  game.Players:FindFirstChild("Egexlia")
 local skylos = game.Players:FindFirstChild("skyloose")
 
-if yen then
-	addadmin("yenilmez_xxgg")
-	Library:Load("Admin Detected!","yenilmez_xxgg",function()
+addadmin(plr.Name)
+	Library:Load("Admin Detected!",plr.Name,function()
 		print("yen")
 	end)
-end
 
 if batu then
 	addadmin("XBatuXCeliqli")
@@ -3692,32 +3658,12 @@ if skylos then
 	end)
 end
 
-local ids2 = {
-	1535827133, -- Hanki
-	1598687225, -- Batumation
-	1547918564, -- xQuest
-	2482958202, -- Tameria
-	2310420760, -- Egw
-	2652287078, -- Batumation
-	1848185287 -- Pog Cat
-}
+
 
 if not plr.Character then plr.CharacterAdded:Wait() end
-if plr.Name ~= plr.Character.Name then
-	return --exit immediately because they're trying to spoof
-end
 
-local data = game:HttpGet('https://api.roblox.com/users/get-by-username?username='..plr.Character.Name)
-local id = https:JSONDecode(data)["Id"]
-local yes = false
 
-for i,v in pairs(ids2) do
-	if id == v then
-		yes = true
-	end
-end
 
-if not yes then return end
 Library:Load("Ur Admin! :skull:", "Type ,cmds to chat",function()
 	print("lol")
 end)
